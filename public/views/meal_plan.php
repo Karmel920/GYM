@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style_menu.css">
+    <script type="text/javascript" src="public/js/index.js"></script>
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
     <title>MEAL PLAN</title>
 </head>
 <body>
     <div class="base-container">
-        <nav>
+        <nav class="hidden">
+            <div class="close-nav"><i class="fa-solid fa-xmark"></i></div>
             <img src="public/img/logo_words.svg">
             <ul>
                 <li>
