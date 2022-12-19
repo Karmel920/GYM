@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style_menu.css">
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
-    <title></title>
+    <title>MY PARAMETERS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
@@ -37,34 +37,35 @@
     </nav>
     <main>
         <header>
-            <div>Settings</div>
+            <div>My parameters</div>
         </header>
-        <section class='settings'>
+        <section class='my_profile'>
             <div class="user-info-container">
                 <form class="user-info">
                     <div class="input-header">Sex</div>
-                    <select name="sex">
+                    <select name="sex" id="sex">
                         <option disabled selected value> -- select an option -- </option>
                         <option value="man">Man</option>
                         <option value="woman">Woman</option>
                     </select>
                     <div class="input-header">Age</div>
-                    <input name="age" type="text" placeholder="age">
+                    <input name="age" id="age" type="number" placeholder="age">
                     <div class="input-header">Height[cm]</div>
-                    <input name="height" type="text" placeholder="170">
+                    <input name="height" id="height" type="number" placeholder="170">
                     <div class="input-header">Weight[kg]</div>
-                    <input name="weight" type="text" placeholder="70">
+                    <input name="weight" id="weight" type="number" placeholder="70">
                     <div class="input-header">Aim</div>
-                    <select name="aim">
+                    <select name="aim" id="aim">
                         <option disabled selected value> -- select an option -- </option>
                         <option value="mass">Mass</option>
                         <option value="reduction">Reduction</option>
                     </select>
-                    <button class="button-save button-font" type="submit">Save</button>
+                    <button disabled type="button" class="button-save button-font">Save</button>
                 </form>
             </div>
         </section>
     </main>
 </div>
 <script src="public/js/index.js"></script>
+<script src="public/js/drop_down_menu.js"></script>
 </body>
