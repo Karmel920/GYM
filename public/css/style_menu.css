@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     /* background: linear-gradient(223.08deg, #1ECA5F 113.57%, rgba(184, 244, 135, 0) 113.57%); */
 }
 
@@ -13,19 +17,103 @@ body {
 nav {
     width: 20%;
     height: 100%;
-    background: linear-gradient(180deg, #93E84D 99.99%, #B8F487 100%);
+    background: #4EB1C0;
+    /*background: linear-gradient(180deg, #93E84D 99.99%, #B8F487 100%);*/
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+.close-nav {
+    display: none;
+}
+
+.open-nav {
+    display: none;
+}
+
 main {
     width: 80%;
-    background: linear-gradient(223.08deg, #1ECA5F 113.57%, rgba(184, 244, 135, 0) 113.57%);
+    background: #6797AF;
+    /*background: #C7F8FF;*/
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: auto;
+}
+
+.user-info-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button-save {
+    background: #6797AF;
+    /*background: rgb(64, 200, 204);*/
+    /*background: #D6D58E;*/
+    /*background: linear-gradient(180deg, #93E84D 99.99%, #B8F487 100%);*/
+    border-radius: 20px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 0.5em;
+    line-height: 3em;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button-save:hover {
+    background: #4d8198;
+}
+
+.button-font {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form.user-info {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    /* height: 50vh; */
+    padding: 2rem 0;
+
+    opacity: 0.75;
+    border-radius: 20px;
+}
+
+input {
+    /*background-color: transparent;*/
+    border: 1px solid;
+    border-radius: 20px;
+    border: 2px solid gray;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    line-height: 2em;
+    width: 50%;
+}
+
+.input-header {
+    width: 50%;
+}
+
+select {
+    border: 1px solid;
+    border-radius: 20px;
+    border: 2px solid gray;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    line-height: 2em;
+    width: 53%;
 }
 
 nav > img {
@@ -41,19 +129,33 @@ a {
 
 li i {
     font-size: 1.5em;
+    color: white;
 }
 
 .button {
-    background: rgb(64, 200, 204);
+    background: #6797AF;
     border-radius: 1em;
-    border: 1px solid black;
     margin-left: 1em;
     text-align: center;
     letter-spacing: 0.7px;
-    color: black;
+    color: white;
     padding: 0.2em;
     width: 60%;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px;
 }
+
+.button:hover {
+    background-position: right center; /* change the direction of the change here */
+    background: #4d8198;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 
 ul {
     list-style-type: none;
@@ -75,13 +177,152 @@ li:last-child {
     width: 100%;
 }
 
+.fa-right-from-bracket {
+    margin-left: 0.5em;
+ }
+
+.fa-right-from-bracket:hover {
+    cursor: pointer;
+}
+
 .fa, .fas {
     width: 1em;
 }
 
 header {
+    color: white;
     display: flex;
     justify-content: center;
     padding: 1em 2em;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informations{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.75;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.informations h2{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.informations div{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.informations div p{
+    display: inline-block;
+    font-size: 24px;
+    margin: 0.5rem 0;
+    width: 50%;
+}
+
+.informations div p:nth-child(odd){
+    text-align: right;
+}
+
+.button-update-info{
+    background: #6797AF;
+    border-radius: 20px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin-bottom: 1em;
+    line-height: 3em;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-account-settings {
+    background: #4EB1C0;
+    border-radius: 20px;
+    width: 30%;
+    border: none;
+    color: white;
+    margin-bottom: 1em;
+    line-height: 3em;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+@media only screen and (max-device-width: 800px) {
+    .close-nav {
+        position: absolute;
+        left: 1rem;
+        top: 0.7rem;
+        font-size: 3rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    .open-nav {
+        position: fixed;
+        left: 1rem;
+        top: 1.2rem;
+        font-size: 2rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transition: all 0.4s;
+    }
+
+    ul {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+    ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li i {
+        font-size: 3em;
+    }
+
+    .button{
+        padding: 1rem 2rem;
+        font-size: 30px;
+        min-width: 150px;
+    }
+
+    .hidden {
+        left: -100%
+    }
 }

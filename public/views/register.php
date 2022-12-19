@@ -20,7 +20,7 @@
                 <div class="input-header">Password</div>
                 <input name="password" type="password" placeholder="password">
                 <button class="button-login button-font">Register</button>
-                <button class="button-signup button-font">Sign in</button>
+                <button onclick="location.href='/login'" type="button" class="button-signup button-font">Sign in</button>
             </form>
         </div>
     </div>

@@ -1,22 +1,22 @@
-console.log("HEY");
-
-const closeButton = document.querySelector(".close-nav");
-const nav = document.querySelector(".nav");
-const openButton = document.querySelector(".open-nav");
 const sex = document.querySelector("#sex");
 const age = document.querySelector("#age");
 const height = document.querySelector("#height");
 const weight = document.querySelector("#weight");
 const aim = document.querySelector("#aim");
 const saveButton = document.querySelector(".button-save");
-const allFields = [sex, age, height, weight, aim];
+const allInputs = [age, height, weight];
+const allSelects = [sex, aim];
 
-console.log(age.value);
-
-allFields.forEach(item=>{
+allInputs.forEach(item=>{
     item.addEventListener("keyup", e=>{
-        const check = age.value!=='' && height.value!=='' && weight.value!=='';
-        console.log(check);
+        const check = age.value!=='' && height.value!=='' && weight.value!=='' && sex.value!=='' && aim.value!=='';
+        saveButton.disabled = !check;
+    })
+})
+
+allSelects.forEach(item=>{
+    item.addEventListener("change", e=>{
+        const check = age.value!=='' && height.value!=='' && weight.value!=='' && sex.value!=='' && aim.value!=='';
         saveButton.disabled = !check;
     })
 })
@@ -26,11 +26,3 @@ saveButton.addEventListener("click", e=>{
     location.href='/settings';
     alert('jestes kocur, udalo ci sie wpisac poprawne dane');
 })
-
-closeButton.addEventListener("click", ()=>{
-    nav.classList.toggle("hidden");
-});
-
-openButton.addEventListener("click", ()=>{
-    nav.classList.toggle("hidden");
-});

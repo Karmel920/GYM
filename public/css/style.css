@@ -7,7 +7,8 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, rgb(146.63, 231.63, 77.21) 99.99%, rgba(123, 234, 165, 0) 100%);
+    background: #6797AF;
+    /*background: linear-gradient(180deg, rgb(146.63, 231.63, 77.21) 99.99%, rgba(123, 234, 165, 0) 100%);*/
 
     display: flex;
     flex-direction: row;
@@ -45,33 +46,35 @@ form.login {
 }
 
 .button-login {
-    background: linear-gradient(180deg, #93E84D 99.99%, #B8F487 100%);
+    background: #6797AF;
     border-radius: 20px;
     width: 50%;
     border: none;
-    color: black;
+    color: white;
     margin: 0.5em;
     line-height: 3em;
+    transition: 0.4s;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button-login:hover {
-    background: linear-gradient(180deg, #7abf41 99.99%, #B8F487 100%);
+    background: #4d8198;
 }
 
 .button-signup {
-    background: linear-gradient(180deg, #93E84D 99.99%, #B8F487 100%);
+    background: #6797AF;
     border-radius: 20px;
     width: 40%;
     border: none;
-    color: black;
+    color: white;
     margin: 1em;
     line-height: 2.5em;
+    transition: 0.4s;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button-signup:hover {
-    background: linear-gradient(180deg, #7abf41 99.99%, #B8F487 100%);
+    background: #4d8198;
 }
 
 button:hover {

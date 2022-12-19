@@ -1,0 +1,20 @@
+.menus {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    margin: 0 2rem;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    padding-bottom: 1.5rem;
+}
+
+.recipe-box > h2 {
+    text-align: center;
+}
