@@ -1,0 +1,22 @@
+{
+  "balance": {
+    "title": "Balance",
+    "components" : ["vegetables", "fruit", "milk", "cheese"]
+  },
+  "high-protein": {
+    "title": "High-protein",
+    "components": ["beef", "chicken", "dairy", "eggs", "fish"]
+  },
+  "high-carbs": {
+    "title": "High-carbs",
+    "components": ["pasta", "rice", "breadstuff", "jam", "kasha"]
+  },
+  "vege": {
+    "title": "Vege",
+    "components": ["fruits", "vegetables", "nuts", "cicer", "soya", "tofu"]
+  },
+  "gluten-free": {
+    "title": "Gluten free",
+    "components": ["sweetcorn", "rise", "nuts", "potatoes", "meat"]
+  }
+}
