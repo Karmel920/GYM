@@ -52,24 +52,25 @@
                 </div>
             </header>
             <section class='recipes'>
-                <div class="recipe-box" data-id="555">
-                    <div class="img-container">
-                        <img src="https://cdn.galleries.smcloud.net/t/galleries/gf-ioL7-9Upn-eojW_ryba-zapiekana-z-warzywami-prosty-przepis-na-danie-rybne-664x442-nocrop.jpg">
-                    </div>
-                    <h2>Fish</h2>
-                    <div class="macro-container">
-                        <span class="kcal">kcal: 400k</span>
-                        <div class="macros">
-                            <span>protein: 30g</span>
-                            <span>fats: 50g</span>
-                            <span>carbs: 10g</span>
-                        </div>
-                    </div>
-                    <a href="#" class="button button-recipe">Show recipe</a>
-                </div>
+<!--                <div class="recipe-box" data-id="555">-->
+<!--                    <div class="img-container">-->
+<!--                        <img src="https://cdn.galleries.smcloud.net/t/galleries/gf-ioL7-9Upn-eojW_ryba-zapiekana-z-warzywami-prosty-przepis-na-danie-rybne-664x442-nocrop.jpg">-->
+<!--                    </div>-->
+<!--                    <h2>Fish</h2>-->
+<!--                    <div class="macro-container">-->
+<!--                        <span class="kcal">calories: 400k</span>-->
+<!--                        <div class="macros">-->
+<!--                            <span>protein: 30g</span>-->
+<!--                            <span>fats: 50g</span>-->
+<!--                            <span>carbs: 10g</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <a onclick="showRecipe(324694)" href="#" class="button button-recipe">Show recipe</a>-->
+<!--                </div>-->
             </section>
         </main>
     </div>
     <script src="public/js/drop_down_menu.js"></script>
+    <script src="public/js/config.js"></script>
     <script src="public/js/recipes.js"></script>
 </body>
