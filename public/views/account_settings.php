@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style_menu.css">
+    <link rel="stylesheet" type="text/css" href="public/css/account_settings.css">
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
     <title>ACCOUNT SETTINGS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,7 +41,15 @@
             <div>Account settings</div>
         </header>
         <section class='account-settings'>
-
+            <form class="change-password">
+                <div class="input-header">Old password</div>
+                <input name="old-password" type="password">
+                <div class="input-header">New Password</div>
+                <input name="new-password" type="password">
+                <div class="input-header">Repeat Password</div>
+                <input name="repeat-password" type="password">
+                <button class="button-ok button-font" type="submit">OK</button>
+            </form>
         </section>
     </main>
 </div>
