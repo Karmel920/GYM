@@ -11,10 +11,25 @@ services:
             - .:/app/
         links:
             - php
-    
+
     php:
         build:
             context: .
             dockerfile: docker/php/Dockerfile
+        volumes:
+            - .:/app/
+    postgres:
+        image: postgres:latest
+        restart: always
+        container_name: postgres
+        build:
+            context: .
+            dockerfile: docker/postgres/DockerFile
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - 5433:5432
         volumes:
             - .:/app/
