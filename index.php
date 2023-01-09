@@ -15,5 +15,6 @@ Routing::get('settings', 'DefaultController');
 Routing::get('my_parameters', 'DefaultController');
 Routing::get('account_settings', 'DefaultController');
 Routing::post('login', 'SecurityController');
+Routing::post('register', 'SecurityController');
 
 Routing::run($path);
