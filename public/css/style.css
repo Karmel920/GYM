@@ -86,7 +86,7 @@ button:hover {
     font-weight: bold;
 }
 
-input {
+input{
     background-color: transparent;
     border: 1px solid;
     border-radius: 20px;
@@ -99,10 +99,14 @@ input {
     width: 50%;
 }
 
+.no-valid, .no-valid:focus {
+    border: 2px solid red;
+    outline-color: red !important;
+}
+
 .input-header {
     width: 50%;
 }
-
 
 @media only screen and (max-device-width: 500px) {
     .container {
@@ -134,4 +138,5 @@ input {
         height: 7em;
         margin: 2em;
     } */
+
 }
