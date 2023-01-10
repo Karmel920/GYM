@@ -47,11 +47,16 @@ class SecurityController extends AppController
 
         $email = $_POST["email"];
         $password = sha1($_POST["password"]);
+        $confirmedPassword = sha1($_POST["confirm-password"]);
 
         $user = $userRepository->getUser($email);
 
         if($user) {
             return $this->render('register', ['messages' => ['User with this email exist!']]);
+        }
+
+        if ($password !== $confirmedPassword) {
+            return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
         $userRepository->addNewUser($email, $password);
