@@ -19,9 +19,19 @@ class UserRepository extends Repository
             return null;
         }
 
+        if($user['id_user_parameters'] == null) {
+            $user['id_user_parameters'] = 0;
+        }
+
+        if($user['id_user_macros'] == null) {
+            $user['id_user_macros'] = 0;
+        }
+
         return new User(
             $user['email'],
-            $user['password']
+            $user['password'],
+            $user['id_user_parameters'],
+            $user['id_user_macros']
         );
     }
 
