@@ -41,7 +41,15 @@
         </header>
         <section class='my_profile'>
             <div class="user-info-container">
-                <form class="user-info">
+                <form class="user-info" action="updateParameters" method="POST">
+                    <div class="messages">
+                        <?php if(isset($messages)) {
+                            foreach ($messages as $message){
+                                echo $message;
+                            }
+                        }
+                        ?>
+                    </div>
                     <div class="input-header">Sex</div>
                     <select name="sex" id="sex">
                         <option disabled selected value> -- select an option -- </option>
@@ -60,7 +68,7 @@
                         <option value="mass">Mass</option>
                         <option value="reduction">Reduction</option>
                     </select>
-                    <button disabled type="button" class="button-save button-font">Save</button>
+                    <button disabled type="submit" class="button-save button-font">Save</button>
                 </form>
             </div>
         </section>

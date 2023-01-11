@@ -21,8 +21,8 @@ allSelects.forEach(item=>{
     })
 })
 
-saveButton.addEventListener("click", e=>{
-    console.log('hellooo');
-    location.href='/settings';
-    alert('jestes kocur, udalo ci sie wpisac poprawne dane');
-})
+// saveButton.addEventListener("click", e=>{
+//     console.log('hellooo');
+//     location.href='/settings';
+//     alert('jestes kocur, udalo ci sie wpisac poprawne dane');
+// })

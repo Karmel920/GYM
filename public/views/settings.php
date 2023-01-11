@@ -42,27 +42,29 @@
         <section class='settings'>
             <button onclick="location.href='/account_settings'" type="button" class="button-account-settings button-font">Account settings</button>
             <div class="informations">
+                <?php $parameters?>
                 <h2>My parameters</h2>
                 <div>
                     <p>Sex:</p>
-                    <p>man</p>
+                    <p><?= $parameters->getSex(); ?></p>
                 </div>
                 <div>
                     <p>Age:</p>
-                    <p>21</p>
+                    <p><?= $parameters->getAge(); ?></p>
                 </div>
                 <div>
                     <p>Height:</p>
-                    <p>170</p>
+                    <p><?= $parameters->getHeight(); ?></p>
                 </div>
                 <div>
                     <p>Weight:</p>
-                    <p>72</p>
+                    <p><?= $parameters->getWeight(); ?></p>
                 </div>
                 <div>
                     <p>Aim:</p>
-                    <p>mass</p>
+                    <p><?= $parameters->getAim(); ?></p>
                 </div>
+                <?php ?>
                 <button onclick="location.href='/my_parameters'" type="button" class="button-update-info button-font">Update parameters</button>
             </div>
         </section>
