@@ -1,6 +1,6 @@
 <?php
 
-// require_once "config.php";
+ require_once "config.php";
 
 class Database {
     private $username;
@@ -10,10 +10,10 @@ class Database {
 
     public function __construct()
     {
-        $this->username = 'postgres';
-        $this->password = 'postgres';
-        $this->host = '192.168.1.140';
-        $this->database = 'postgres';
+        $this->username = USERNAME;
+        $this->password = PASSWORD;
+        $this->host = HOST;
+        $this->database = DATABASE;
     }
 
     public function connect()
