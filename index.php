@@ -13,6 +13,7 @@ Routing::get('recipes', 'DefaultController');
 Routing::get('menus', 'DefaultController');
 Routing::get('settings', 'UserParametersController');
 Routing::get('my_parameters', 'DefaultController');
+Routing::get('day_meals', 'DefaultController');
 Routing::get('account_settings', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');

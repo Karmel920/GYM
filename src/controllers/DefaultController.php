@@ -35,4 +35,8 @@ class DefaultController extends AppController {
     public function account_settings() {
         $this->render('account_settings');
     }
+
+    public function day_meals() {
+        $this->render('day_meals');
+    }
 }

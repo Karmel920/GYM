@@ -1,10 +1,11 @@
 const currentDate = document.querySelector(".current-date");
 const daysTag = document.querySelector(".days");
 const prevNextIcon = document.querySelectorAll(".icons span");
+let dayDate;
 
 let date = new Date();
-currYear = date.getFullYear();
-currMonth = date.getMonth();
+let currYear = date.getFullYear();
+let currMonth = date.getMonth();
 
 const months = ["January","February","March","April","May","June","July",
                 "August","September","October","November","December"];
@@ -21,7 +22,9 @@ const renderCalendar = () => {
     
     for (let i = 1; i <= lastDateofMonth; i++) {
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : "";
-        spanTag += `<span class="${isToday}">${i}</span>`;
+        const id = [(currMonth + 1).toString(), i.toString(), currYear.toString()];
+        const idString = id.join('-');
+        spanTag += `<span data-id="${i}-${currMonth + 1}-${currYear}" onclick="handleDay('${idString}')" class="${isToday} current-month">${i}</span>`;
     }
 
     for (let i = lastDayofMonth; i < 6; i++) {
@@ -48,3 +51,7 @@ prevNextIcon.forEach(icon => {
         renderCalendar();
     });
 });
+
+function handleDay(day){
+   location.href=`/day_meals?day=${day}`;
+}
