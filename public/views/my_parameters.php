@@ -31,7 +31,7 @@
             <li>
                 <i class="fa fa-solid fa-gear"></i>
                 <a href="settings" class="button button-settings">Settings</a>
-                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
             </li>
         </ul>
     </nav>

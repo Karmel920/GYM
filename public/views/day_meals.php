@@ -33,7 +33,7 @@
             <li>
                 <i class="fa fa-solid fa-gear"></i>
                 <a href="settings" class="button button-settings">Settings</a>
-                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
             </li>
         </ul>
     </nav>
@@ -98,7 +98,7 @@
             <div class="form-container">
                 <form>
                     <input type="text" placeholder="find meal">
-                    <button class="button-form">Add meal</button>
+                    <button class="button-form button-add-meal">Add meal</button>
                     <span>OR</span>
                     <button class="button-form button-new-meal">New Meal</button>
                 </form>
