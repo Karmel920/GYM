@@ -1,0 +1,132 @@
+.day{
+    background: white;
+    margin: 0 2rem;
+    padding-top: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+
+.meals {
+    max-height: 400px;
+    overflow: auto;
+    width: 50%;
+}
+
+.form-container{
+    width: 50%;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+
+.meal{
+    width: 50%;
+    max-width: 600px;
+    background: #4EB1C0;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    color: white;
+}
+
+.meal h2{
+    margin-top: 0;
+}
+
+.macros-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.macros-list span {
+    padding-right: 1rem;
+}
+
+.sum{
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.button-form {
+    background: #6797AF;
+    border: none;
+    border-radius: 1em;
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: white;
+    padding: 12px 24px;
+    width: 30%;
+    transition: 0.4s;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: RGBA(0,0,0,0.50);
+}
+
+.visible {
+    display: block;
+}
+
+.popup-add-meal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    z-index: 1001;
+    padding: 2rem;
+}
+
+.close-container{
+    display: block;
+    text-align: right;
+    justify-self: right;
+    width: 90%;
+    /*padding: 1rem;*/
+}
+
+.close-menu:hover {
+    cursor: pointer;
+}
+
+.form-wrapper {
+    position: relative;
+    overflow: scroll;
+    /*top: 4rem;*/
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    height: 100%;
+}
+
+form.meal-form {
+    opacity: 1;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
