@@ -7,17 +7,19 @@ class Meal
     private $proteins;
     private $fats;
     private $carbs;
+    private $idMeal;
 
-    public function __construct(string $name, int $kcal, int $proteins, int $fats, int $carbs)
+    public function __construct($name, $kcal, $proteins, $fats, $carbs, $idMeal=null)
     {
         $this->name = $name;
         $this->kcal = $kcal;
         $this->proteins = $proteins;
         $this->fats = $fats;
         $this->carbs = $carbs;
+        $this->idMeal = $idMeal;
     }
 
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -27,7 +29,7 @@ class Meal
         $this->name = $name;
     }
 
-    public function getKcal(): int
+    public function getKcal()
     {
         return $this->kcal;
     }
@@ -37,7 +39,7 @@ class Meal
         $this->kcal = $kcal;
     }
 
-    public function getProteins(): int
+    public function getProteins()
     {
         return $this->proteins;
     }
@@ -47,7 +49,7 @@ class Meal
         $this->proteins = $proteins;
     }
 
-    public function getFats(): int
+    public function getFats()
     {
         return $this->fats;
     }
@@ -57,7 +59,7 @@ class Meal
         $this->fats = $fats;
     }
 
-    public function getCarbs(): int
+    public function getCarbs()
     {
         return $this->carbs;
     }
@@ -65,6 +67,16 @@ class Meal
     public function setCarbs(int $carbs)
     {
         $this->carbs = $carbs;
+    }
+
+    public function getIdMeal()
+    {
+        return $this->idMeal;
+    }
+
+    public function setIdMeal($idMeal)
+    {
+        $this->idMeal = $idMeal;
     }
 
 }

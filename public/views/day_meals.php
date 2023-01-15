@@ -39,26 +39,26 @@
     </nav>
     <main>
         <div class="overlay">
-                   <form class="meal-form">
+                   <form class="meal-form" action="addNewMeal" method="POST">
                         <div class="close-container"><i class="fa-solid fa-xmark close-menu"></i></div>
-    <!--                    <div class="messages">-->
-    <!--                        --><?php //if(isset($messages)) {
-    //                            foreach ($messages as $message){
-    //                                echo $message;
-    //                            }
-    //                        }
-    //                        ?>
-    <!--                    </div>-->
+                        <div class="messages">
+                            <?php if(isset($messages)) {
+                                foreach ($messages as $message){
+                                    echo $message;
+                                }
+                            }
+                            ?>
+                        </div>
                         <div class="input-header">Name</div>
                         <input name="name" id="name" type="text" placeholder="name">
                         <div class="input-header">Kcal</div>
-                        <input name="kcal" id="kcal" type="text" placeholder="300">
+                        <input name="kcal" id="kcal" type="number" placeholder="300">
                         <div class="input-header">Proteins</div>
-                        <input name="proteins" id="proteins" type="text" placeholder="50">
+                        <input name="proteins" id="proteins" type="number" placeholder="50">
                         <div class="input-header">Fats</div>
-                        <input name="fats" id="fats" type="text" placeholder="10">
+                        <input name="fats" id="fats" type="number" placeholder="10">
                         <div class="input-header">Carbs</div>
-                        <input name="carbs" id="carbs" type="text" placeholder="20">
+                        <input name="carbs" id="carbs" type="number" placeholder="20">
                         <button disabled type="submit" class="button-save button-font">Add</button>
                    </form>
         </div>
@@ -117,4 +117,5 @@
 </div>
 <script src="public/js/drop_down_menu.js"></script>
 <script src="public/js/day_meal.js"></script>
+<script src="public/js/add_meal.js"></script>
 </body>

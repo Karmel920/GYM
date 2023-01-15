@@ -19,5 +19,6 @@ Routing::get('logout', 'SecurityController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'RegisterController');
 Routing::post('updateParameters', 'UserParametersController');
+Routing::post('addNewMeal', 'MealController');
 
 Routing::run($path);
