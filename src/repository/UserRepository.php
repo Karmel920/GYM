@@ -76,7 +76,16 @@ class UserRepository extends Repository
         ]);
     }
 
-
-
+    public function updatePassword(User $user, $newPassword): void
+    {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE public.users SET password = :password
+            WHERE id_user = :id_user
+        ');
+        $idUser = $user->getIdUser();
+        $stmt->bindParam(':password', $newPassword, PDO::PARAM_STR);
+        $stmt->bindParam(':id_user', $idUser, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 
 }

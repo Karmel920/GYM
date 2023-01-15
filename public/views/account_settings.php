@@ -41,7 +41,15 @@
             <div>Account settings</div>
         </header>
         <section class='account-settings'>
-            <form class="change-password">
+            <form class="change-password" action="changePassword" method="POST">
+                <div class="messages">
+                    <?php if(isset($messages)) {
+                        foreach ($messages as $message){
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <div class="input-header">Old password</div>
                 <input name="old-password" type="password">
                 <div class="input-header">New Password</div>
@@ -54,4 +62,5 @@
     </main>
 </div>
 <script src="public/js/drop_down_menu.js"></script>
+<script src="public/js/update_password.js"></script>
 </body>

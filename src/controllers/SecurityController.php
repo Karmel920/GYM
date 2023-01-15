@@ -62,4 +62,28 @@ class SecurityController extends AppController
 
         return $this->render('login');
     }
+
+    public function changePassword()
+    {
+        if(!$this->isPost()) {
+            return $this->render('account_settings');
+        }
+
+        $oldPassword = sha1($_POST["old-password"]);
+        $newPassword = sha1($_POST["new-password"]);
+        $repeatedPassword = sha1($_POST["repeat-password"]);
+
+        $user = $this->userRepository->getUserById($_COOKIE['id_user']);
+
+        if($user->getPassword() !== $oldPassword) {
+            return $this->render('account_settings', ['messages' => ['Wrong old password!']]);
+        }
+
+        if ($newPassword !== $repeatedPassword) {
+            return $this->render('account_settings', ['messages' => ['Please provide proper password']]);
+        }
+
+        $this->userRepository->updatePassword($user, $repeatedPassword);
+        return $this->render('account_settings', ['messages' => ['Password was successful changed!']]);
+    }
 }

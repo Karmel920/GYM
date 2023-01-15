@@ -17,6 +17,7 @@ Routing::get('day_meals', 'DefaultController');
 Routing::get('account_settings', 'DefaultController');
 Routing::get('logout', 'SecurityController');
 Routing::post('login', 'SecurityController');
+Routing::post('changePassword', 'SecurityController');
 Routing::post('register', 'RegisterController');
 Routing::post('updateParameters', 'UserParametersController');
 Routing::post('addNewMeal', 'MealController');

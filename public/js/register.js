@@ -12,7 +12,6 @@ function arePasswordsSame(password, confirmedPassword) {
 }
 
 function markValidation(element, condition) {
-    console.log("walidacja");
     !condition ? element.classList.add('no-valid') : element.classList.remove('no-valid');
 }
 

@@ -62,3 +62,8 @@ input {
 .input-header {
     width: 50%;
 }
+
+.no-valid, .no-valid:focus {
+    border: 2px solid red;
+    outline-color: red !important;
+}
