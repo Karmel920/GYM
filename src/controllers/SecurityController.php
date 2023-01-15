@@ -3,12 +3,27 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/SessionRepository.php';
 
 class SecurityController extends AppController
 {
+    private $userRepository;
+    private $sessionRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+        $this->sessionRepository = new SessionRepository();
+    }
+
     public function login()
     {
-        $userRepository = new UserRepository();
+        $url = "http://$_SERVER[HTTP_HOST]";
+        if(isset($_COOKIE["user-id"])) {
+            header("Location: {$url}/dashboard");
+            return;
+        }
 
         if(!$this->isPost()) {
             return $this->render('login');
@@ -17,7 +32,7 @@ class SecurityController extends AppController
         $email = $_POST["email"];
         $password = sha1($_POST["password"]);
 
-        $user = $userRepository->getUser($email);
+        $user = $this->userRepository->getUserByEmail($email);
 
         if(!$user) {
             return $this->render('login', ['messages' => ['User not exist!']]);
@@ -31,39 +46,20 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
-//        return $this->render('meal_plan');
+        $userCookie = 'id_user';
+        $cookieValue = $user->getIdUser();
+        setcookie($userCookie, $cookieValue, time() + (60 * 30), "/");
+        $this->sessionRepository->startSession($cookieValue);
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/meal_plan");
     }
 
-    public function register()
+    public function logout()
     {
-        $userRepository = new UserRepository();
+        setcookie('id_user', $_COOKIE['id_user'], time() - 10, "/");
+        $this->sessionRepository->endSession($_COOKIE["id_user"]);
 
-        if(!$this->isPost()) {
-            return $this->render('register');
-        }
-
-        $email = $_POST["email"];
-        $password = sha1($_POST["password"]);
-        $confirmedPassword = sha1($_POST["confirm-password"]);
-
-        $user = $userRepository->getUser($email);
-
-        if($user) {
-            return $this->render('register', ['messages' => ['User with this email exist!']]);
-        }
-
-        if ($password !== $confirmedPassword) {
-            return $this->render('register', ['messages' => ['Please provide proper password']]);
-        }
-
-        $userRepository->addNewUser($email, $password);
-        return $this->render('register', ['messages' => ['Registration was successful, sign in!']]);
-
-//        $url = "http://$_SERVER[HTTP_HOST]";
-//        header("Location: {$url}/login");
+        return $this->render('login');
     }
-
 }

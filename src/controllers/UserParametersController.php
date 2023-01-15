@@ -2,16 +2,20 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/UserParameters.php';
+require_once __DIR__.'/../models/UserMacros.php';
 require_once __DIR__.'/../repository/UserParametersRepository.php';
+require_once __DIR__.'/../repository/UserMacrosRepository.php';
 
 class UserParametersController extends AppController
 {
     private $userParametersRepository;
+    private $userMacrosRepository;
 
     public function __construct()
     {
         parent::__construct();
         $this->userParametersRepository = new UserParametersRepository();
+        $this->userMacrosRepository = new UserMacrosRepository();
     }
 
     public function updateParameters()
@@ -26,19 +30,15 @@ class UserParametersController extends AppController
         $weight = $_POST['weight'];
         $aim = $_POST['aim'];
 
-        $userParameters = new UserParameters($sex, $age, $height, $weight,$aim);
-
-        $this->userParametersRepository->addUserParameters($userParameters);
+        $userParameters = new UserParameters($sex, $age, $height, $weight, $aim, $_COOKIE["id_user"]);
+        $this->userParametersRepository->updateUserParameters($userParameters, $_COOKIE["id_user"]);
+        $this->userMacrosRepository->updateUserMacros($userParameters, $_COOKIE["id_user"]);
         return $this->render('my_parameters', ['messages' => ['Parameters was succesful updated!']]);
-
-        //get id_user_paramters
-        //if not null update paramaters where id = id_user_parameters
-        //if null insert new user_parameters and set id_user_parameters in users
     }
 
     public function settings()
     {
-        $parameters = $this->userParametersRepository->getUserParameters(10);
+        $parameters = $this->userParametersRepository->getUserParameters($_COOKIE["id_user"]);
         return $this->render('settings', ['parameters' => $parameters]);
     }
 }

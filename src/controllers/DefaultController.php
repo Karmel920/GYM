@@ -13,30 +13,79 @@ class DefaultController extends AppController {
     }
 
     public function meal_plan() {
-        $this->render('meal_plan');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('meal_plan');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
     
     public function recipes() {
-        $this->render('recipes');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('recipes');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 
     public function menus() {
-        $this->render('menus');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('menus');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 
     public function settings() {
-        $this->render('settings');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('settings');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 
     public function my_parameters() {
-        $this->render('my_parameters');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('my_parameters');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 
     public function account_settings() {
-        $this->render('account_settings');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('account_settings');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 
     public function day_meals() {
-        $this->render('day_meals');
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $this->render('day_meals');
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 }

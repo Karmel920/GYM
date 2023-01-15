@@ -5,15 +5,13 @@ class User
 {
     private $email;
     private $password;
-    private $idUserParameters;
-    private $idUserMacros;
+    private $idUser;
 
-    public function __construct(string $email, string $password, int $idUserParameters, int $idUserMacros)
+    public function __construct(string $email, string $password, int $idUser=null)
     {
         $this->email = $email;
         $this->password = $password;
-        $this->idUserParameters = $idUserParameters;
-        $this->idUserMacros = $idUserMacros;
+        $this->idUser = $idUser;
     }
 
     public function getEmail(): string
@@ -36,25 +34,14 @@ class User
         $this->password = $password;
     }
 
-    public function getIdUserParameters(): int
+    public function getIdUser(): int
     {
-        return $this->idUserParameters;
+        return $this->idUser;
     }
 
-    public function setIdUserParameters(int $idUserParameters)
+    public function setIdUser(int $idUser)
     {
-        $this->idUserParameters = $idUserParameters;
+        $this->idUser = $idUser;
     }
-
-    public function getIdUserMacros(): int
-    {
-        return $this->idUserMacros;
-    }
-
-    public function setIdUserMacros(int $idUserMacros)
-    {
-        $this->idUserMacros = $idUserMacros;
-    }
-
 
 }
