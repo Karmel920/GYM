@@ -8,7 +8,7 @@ class UserMacrosRepository extends Repository
     public function getUserMacros(int $idUser)
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.user_macros WHERE id_user = :id_user
+            SELECT * FROM public.users_macros WHERE id_user = :id_user
         ');
         $stmt->bindParam(':id_user', $idUser, PDO::PARAM_INT);
         $stmt->execute();
