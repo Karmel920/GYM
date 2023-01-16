@@ -20,6 +20,8 @@ buttonNewMeal.addEventListener('click', evt => {
 document.addEventListener('click', e=>{
     const pop = e.target.closest(".close-menu");
     if(pop){
+        let mess = document.querySelector(".message");
+        mess.innerText = "";
         overlay.classList.remove("visible");
     }
 });

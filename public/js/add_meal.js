@@ -5,7 +5,7 @@ const proteins = document.querySelector("#proteins");
 const fats = document.querySelector("#fats");
 const carbs = document.querySelector("#carbs");
 const allInputs = [name, kcal, proteins, fats, carbs];
-console.log(saveButton);
+const mess = document.querySelector(".message");
 
 allInputs.forEach(item=>{
     item.addEventListener("keyup", e=>{
@@ -14,3 +14,22 @@ allInputs.forEach(item=>{
     })
 })
 
+saveButton.addEventListener('click', addMeal);
+
+function addMeal() {
+    const data = {date: document.querySelector(".date-day").innerText, name: name.value, kcal: kcal.value,
+                  proteins: proteins.value, fats: fats.value, carbs: carbs.value};
+    fetch("/addNewMeal", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(function (response) {
+        return response.json();
+    }).then(function (message) {
+        if(message['message'] === 'added') {
+            mess.innerText = "Meal successfully added!"
+        }
+    })
+}

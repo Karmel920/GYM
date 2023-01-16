@@ -3,6 +3,9 @@
     <link rel="stylesheet" type="text/css" href="public/css/style_menu.css">
     <link rel="stylesheet" type="text/css" href="public/css/day_meals.css">
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
+    <script src="public/js/drop_down_menu.js" defer></script>
+    <script src="public/js/add_meal.js" defer></script>
+    <script src="public/js/day_meal.js" defer></script>
     <title>DAY MEALS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -39,16 +42,9 @@
     </nav>
     <main>
         <div class="overlay">
-                   <form class="meal-form" action="addNewMeal" method="POST">
+                   <form class="meal-form">
+                        <div class="message"></div>
                         <div class="close-container"><i class="fa-solid fa-xmark close-menu"></i></div>
-                        <div class="messages">
-                            <?php if(isset($messages)) {
-                                foreach ($messages as $message){
-                                    echo $message;
-                                }
-                            }
-                            ?>
-                        </div>
                         <div class="input-header">Name</div>
                         <input name="name" id="name" type="text" placeholder="name">
                         <div class="input-header">Kcal</div>
@@ -59,7 +55,7 @@
                         <input name="fats" id="fats" type="number" placeholder="10">
                         <div class="input-header">Carbs</div>
                         <input name="carbs" id="carbs" type="number" placeholder="20">
-                        <button disabled type="submit" class="button-save button-font">Add</button>
+                        <button disabled type="reset" class="button-save button-font">Add</button>
                    </form>
         </div>
         <header>
@@ -115,7 +111,4 @@
         </section>
     </main>
 </div>
-<script src="public/js/drop_down_menu.js"></script>
-<script src="public/js/day_meal.js"></script>
-<script src="public/js/add_meal.js"></script>
 </body>
