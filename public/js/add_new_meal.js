@@ -14,9 +14,9 @@ allInputs.forEach(item=>{
     })
 })
 
-saveButton.addEventListener('click', addMeal);
+saveButton.addEventListener('click', addNewMeal);
 
-function addMeal() {
+function addNewMeal() {
     const data = {date: document.querySelector(".date-day").innerText, name: name.value, kcal: kcal.value,
                   proteins: proteins.value, fats: fats.value, carbs: carbs.value};
     fetch("/addNewMeal", {
@@ -29,7 +29,9 @@ function addMeal() {
         return response.json();
     }).then(function (message) {
         if(message['message'] === 'added') {
-            mess.innerText = "Meal successfully added!"
+            mess.innerText = "Meal successfully added!";
         }
-    })
+    });
 }
+
+
