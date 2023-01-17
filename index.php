@@ -21,5 +21,9 @@ Routing::post('changePassword', 'SecurityController');
 Routing::post('register', 'RegisterController');
 Routing::post('updateParameters', 'UserParametersController');
 Routing::post('addNewMeal', 'MealController');
+Routing::post('addMealToDay', 'DayController');
+Routing::post('getMealByDay', 'DayController');
+Routing::post('getSumMacros', 'DayController');
+Routing::post('getUserMacros', 'UserMacrosController');
 
 Routing::run($path);

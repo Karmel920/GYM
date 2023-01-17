@@ -29,6 +29,17 @@ class UserMacrosRepository extends Repository
         );
     }
 
+    public function getUserMacrosFetch(int $idUser)
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.users_macros WHERE id_user = :id_user
+        ');
+        $stmt->bindParam(':id_user', $idUser, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function addUserMacros(UserMacros $userMacros): void
     {
         $stmt = $this->database->connect()->prepare('

@@ -4,8 +4,9 @@
     <link rel="stylesheet" type="text/css" href="public/css/day_meals.css">
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
     <script src="public/js/drop_down_menu.js" defer></script>
-    <script src="public/js/add_meal.js" defer></script>
+    <script src="public/js/add_new_meal.js" defer></script>
     <script src="public/js/day_meal.js" defer></script>
+    <script src="public/js/show_day_meals.js" defer></script>
     <title>DAY MEALS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -63,52 +64,83 @@
         </header>
         <section class='day'>
             <div class="meals">
-                <div class="meal">
-                    <h2>Hamburger</h2>
-                    <div class="macros-list">
-                        <span>kcal:2000</span>
-                        <span>proteins:200g</span>
-                        <span>carbo:100g</span>
-                        <span>fats:100g</span>
-                    </div>
-                </div>
-                <div class="meal">
-                    <h2>Hamburger</h2>
-                    <div class="macros-list">
-                        <span>kcal:2000</span>
-                        <span>proteins:200g</span>
-                        <span>carbo:100g</span>
-                        <span>fats:100g</span>
-                    </div>
-                </div>
-                <div class="meal">
-                    <h2>Hamburger</h2>
-                    <div class="macros-list">
-                        <span>kcal:2000</span>
-                        <span>proteins:200g</span>
-                        <span>carbo:100g</span>
-                        <span>fats:100g</span>
-                    </div>
-                </div>
+<!--                <div class="meal">-->
+<!--                    <h2>Hamburger</h2>-->
+<!--                    <div class="macros-list">-->
+<!--                        <span>kcal:2000</span>-->
+<!--                        <span>proteins:200g</span>-->
+<!--                        <span>carbs:100g</span>-->
+<!--                        <span>fats:100g</span>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <div class="form-container">
                 <form>
-                    <input type="text" placeholder="find meal">
-                    <button class="button-form button-add-meal">Add meal</button>
+                    <input class="meal-name" type="text" id="name-input" placeholder="find meal">
+                    <button disabled type="reset" class="button-form button-add-meal">Add meal</button>
                     <span>OR</span>
                     <button class="button-form button-new-meal">New Meal</button>
+                    <button class="button-form button-day-meals">Show meals on day</button>
                 </form>
             </div>
-            <div class="sum">
-                Summarise:
-                <div class="macros-list">
-                    <span>kcal: 2000/2500</span>
-                    <span>proteins: 100/200g</span>
-                    <span>fats: 50/100g</span>
-                    <span>carbo: 100/300g</span>
+            <div class="sum-container">
+                <div class="sum">
+                    <h3>Summarise:</h3>
+                    <div class="macros-list">
+                        <span>kcal: </span>
+                        <span>proteins: </span>
+                        <span>fats: </span>
+                        <span>carbs: </span>
+                    </div>
+                </div>
+                <div class="user-macro">
+                    <h3>Your goals:</h3>
+                    <div class="macros-list">
+                        <span>kcal: </span>
+                        <span>proteins: </span>
+                        <span>fats: </span>
+                        <span>carbs: </span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 </div>
 </body>
+
+<template id="meal-template">
+    <div class="meal">
+        <h2>Hamburger</h2>
+        <div class="macros-list">
+            <span class="meal-kcal">kcal:2000</span>
+            <span class="meal-proteins">proteins:200g</span>
+            <span class="meal-fats">fats:100g</span>
+            <span class="meal-carbs">carbs:100g</span>
+        </div>
+    </div>
+</template>
+
+<template id="summarise-template">
+    <div class="sum">
+        <h3>Summarise:</h3>
+        <div class="macros-list">
+            <span class="macro-kcal">kcal: </span>
+            <span class="macro-proteins">proteins: </span>
+            <span class="macro-fats">fats: </span>
+            <span class="macro-carbs">carbs: </span>
+        </div>
+    </div>
+</template>
+
+<template id="user-macro-template">
+    <div class="user-macro">
+        <h3>Your goals:</h3>
+        <div class="macros-list">
+            <span class="user-kcal">kcal: </span>
+            <span class="user-proteins">proteins: </span>
+            <span class="user-fats">fats: </span>
+            <span class="user-carbs">carbs: </span>
+        </div>
+    </div>
+</template>
+

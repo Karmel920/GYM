@@ -10,7 +10,7 @@
 }
 
 .meals {
-    max-height: 400px;
+    max-height: 300px;
     overflow: auto;
     width: 50%;
 }
@@ -51,9 +51,18 @@
     padding-right: 1rem;
 }
 
-.sum{
+.sum-container{
     text-align: center;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
+    background: #6797AF;
+    padding: 1em;
+    color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px;
+}
+
+.sum h3 {
+    margin-top: 0;
 }
 
 .button-form {

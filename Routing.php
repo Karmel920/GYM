@@ -6,6 +6,7 @@ require_once 'src/controllers/RegisterController.php';
 require_once 'src/controllers/UserParametersController.php';
 require_once 'src/controllers/UserMacrosController.php';
 require_once 'src/controllers/MealController.php';
+require_once 'src/controllers/DayController.php';
 
 class Routing {
     public static $routes;

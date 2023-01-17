@@ -5,12 +5,12 @@ require_once __DIR__.'/../models/Meal.php';
 
 class MealRepository extends Repository
 {
-    public function getMeal(int $idMeal)
+    public function getMealByName($name)
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.meals WHERE id_meal = :id_meal
+            SELECT * FROM public.meals WHERE name = :name
         ');
-        $stmt->bindParam(':id_meal', $idMeal, PDO::PARAM_INT);
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->execute();
 
         $meal = $stmt->fetch(PDO::FETCH_ASSOC);
