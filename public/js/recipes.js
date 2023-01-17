@@ -30,17 +30,13 @@ searchButton.addEventListener("click", async ()=>{
     const data = await response.json();
     const recipes = data.results; //[{},{}]
     let displayedMeals =[];
-    console.log(recipes);
-    console.log(data);
 
     recipesContainer.innerHTML = "";
 
     recipes.forEach(item=>{
-
         fetch(`https://api.spoonacular.com/recipes/${item.id}/nutritionWidget.json?apiKey=${API_KEY}`).then(response=>{
             return response.json();
         }).then(macros=>{
-            console.log(macros);
             const meal = {
                 id: item.id,
                 name: item.title,
@@ -51,17 +47,12 @@ searchButton.addEventListener("click", async ()=>{
                 protein: macros.protein
             };
             displayedMeals.push(meal);
-            console.log(meal);
             generatePreview(meal);
-
         })
     });
-
-    console.log(displayedMeals);
 })
 const getView = function (){
     const recipesButtons = document.querySelectorAll(".button-recipe");
-    console.log(recipesButtons);
 }
 
 const generatePreview =function(meal){
@@ -82,7 +73,6 @@ const generatePreview =function(meal){
                  </div>`;
     recipesContainer.insertAdjacentHTML("afterbegin", html);
     recipeButtons = document.querySelectorAll(".button-recipe");
-    console.log(recipeButtons);
 }
 //
 // const showDetailRecipe = function()
