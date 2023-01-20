@@ -3,6 +3,8 @@
     <link rel="stylesheet" type="text/css" href="public/css/style_menu.css">
     <link rel="stylesheet" type="text/css" href="public/css/meal_plan.css">
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
+    <script src="public/js/drop_down_menu.js" defer></script>
+    <script src="public/js/calendar.js" defer></script>
     <title>MEAL PLAN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -33,7 +35,7 @@
                 <li>
                     <i class="fa fa-solid fa-gear"></i>
                     <a href="settings" class="button button-settings">Settings</a>
-                    <a href="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    <a href="logout" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </li>
             </ul>
         </nav>
@@ -64,6 +66,4 @@
             </section>
         </main>
     </div>
-    <script src="public/js/drop_down_menu.js"></script>
-    <script src="public/js/calendar.js"></script>
 </body>

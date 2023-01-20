@@ -65,3 +65,18 @@
 .close-menu:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-device-width: 800px) {
+    .menus {
+        grid-template-columns: 1fr;
+    }
+
+    .button-menu {
+        margin-left: 0;
+    }
+
+    .popup {
+        width: 70%;
+        height: 70%;
+    }
+}

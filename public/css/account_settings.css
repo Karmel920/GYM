@@ -67,3 +67,30 @@ input {
     border: 2px solid red;
     outline-color: red !important;
 }
+
+@media only screen and (max-device-width: 800px) {
+    header {
+        text-align: center;
+    }
+
+    form.change-password {
+        width: 80%;
+    }
+
+    .account-settings {
+        padding-top: 0;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .input-header {
+        width: 80%;
+        text-align: left;
+    }
+
+    .button-ok {
+        width: 80%;
+    }
+}

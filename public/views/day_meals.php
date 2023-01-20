@@ -37,7 +37,7 @@
             <li>
                 <i class="fa fa-solid fa-gear"></i>
                 <a href="settings" class="button button-settings">Settings</a>
-                <a href="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                <a href="logout" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
             </li>
         </ul>
     </nav>
@@ -63,6 +63,15 @@
             <div class="date-day">06-01-2023</div>
         </header>
         <section class='day'>
+            <div class="form-container">
+                <form>
+                    <input class="meal-name" type="text" id="name-input" placeholder="find meal">
+                    <button disabled type="reset" class="button-form button-add-meal">Add meal</button>
+                    <span>OR</span>
+                    <button class="button-form button-new-meal">New Meal</button>
+                    <button class="button-form button-day-meals">Show meals on day</button>
+                </form>
+            </div>
             <div class="meals">
 <!--                <div class="meal">-->
 <!--                    <h2>Hamburger</h2>-->
@@ -73,15 +82,6 @@
 <!--                        <span>fats:100g</span>-->
 <!--                    </div>-->
 <!--                </div>-->
-            </div>
-            <div class="form-container">
-                <form>
-                    <input class="meal-name" type="text" id="name-input" placeholder="find meal">
-                    <button disabled type="reset" class="button-form button-add-meal">Add meal</button>
-                    <span>OR</span>
-                    <button class="button-form button-new-meal">New Meal</button>
-                    <button class="button-form button-day-meals">Show meals on day</button>
-                </form>
             </div>
             <div class="sum-container">
                 <div class="sum">

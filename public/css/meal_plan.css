@@ -99,3 +99,34 @@
     width: calc(100% / 7);
     text-align: center;
 }
+
+@media only screen and (max-device-width: 800px) {
+    .wrapper {
+        width: 200px;
+        padding: 0 1rem;
+    }
+
+    .wrapper .current-date {
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .wrapper .icons span {
+        padding: 0 0.8rem;
+    }
+
+    .weeks span{
+        font-size: 10px;
+        /*margin-right: 0.3rem;*/
+    }
+
+    .days span {
+        font-size: 10px;
+    }
+
+    .days span::before {
+        height: 135%;
+        width: 50%;
+    }
+}

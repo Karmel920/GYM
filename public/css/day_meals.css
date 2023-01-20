@@ -139,3 +139,73 @@ form.meal-form {
     width: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media only screen and (max-device-width: 800px) {
+    header {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .sum-container {
+        width: 70%;
+    }
+
+    .macros-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .day {
+        margin-bottom: 1rem;
+    }
+
+    .popup-add-meal {
+        width: 70%;
+        height: 70%;
+    }
+
+    .form-container {
+        margin-bottom: 1rem;
+    }
+
+    form.meal-form {
+        width: 90%;
+    }
+
+    .day {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .button-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .meals {
+        width: 100%;
+    }
+
+    .meal {
+        width: 60%;
+    }
+
+    .meal h2 {
+        font-size: 20px;
+    }
+
+    .meal-name {
+        width: 100%;
+    }
+
+    .macros-list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    .macros-list span {
+        padding-right: 0;
+    }
+}
