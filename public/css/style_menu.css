@@ -70,6 +70,12 @@ main {
     font-size: 16px;
     font-weight: bold;
 }
+.my_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
 
 form.user-info, form.meal-form {
     background: white;
@@ -175,6 +181,7 @@ li:last-child {
     bottom: 0;
     width: 100%;
 }
+
 
 .fa-right-from-bracket {
     margin-left: 0.5em;
@@ -282,6 +289,7 @@ header {
         font-size: 2rem;
         cursor: pointer;
         display: block;
+        z-index: 100;
     }
 
     main {
@@ -294,6 +302,7 @@ header {
         left: 0;
         top: 0;
         transition: all 0.4s;
+        z-index: 100;
     }
 
     ul {
@@ -303,24 +312,100 @@ header {
         align-items: center;
         flex-direction: column;
     }
+
     ul li{
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
+        font-size: 16px;
     }
 
     li i {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .button{
-        padding: 1rem 2rem;
-        font-size: 30px;
+        padding: 10px 20px;
+        font-size: 16px;
         min-width: 150px;
+    }
+
+    li:last-child {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+    }
+
+    li:last-child > .button{
+        padding: 5px 10px;
+    }
+
+    li:last-child>i, .fa-xmark, .fa-right-from-bracket{
+        font-size: 28px;
+    }
+
+    .fa-bars {
+        padding-top: 0;
+        font-size: 24px;
+    }
+
+    li:last-child> .logout{
+        height: 28px;
     }
 
     .hidden {
         left: -100%
+    }
+
+    header {
+        padding-top: 2em;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-bottom: 0.8em;
+        text-align: center;
+    }
+
+    .button-account-settings {
+        width: 80%;
+    }
+
+    .informations {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .informations div p {
+        font-size: 20px;
+    }
+
+    .button-update-info {
+        width: 80%;
+    }
+
+    .form.user-info {
+        padding: 0 5em;
+    }
+
+    .user-info-container {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .my_profile {
+        padding-top: 0;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    select {
+        width: 80%;
+    }
+
+    .input-header {
+        width: 80%;
+        text-align: left;
     }
 }
