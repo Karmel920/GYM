@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.calendar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 450px;
+    padding: 0 2rem;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.wrapper .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+    padding: 0 1rem;
+}
+
+.wrapper .icons span{
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50%;
+    padding: 0.8rem;
+}
+
+.wrapper .icons span:hover{
+    background-color: #c9c6c6;
+}
+
+.cal {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.weeks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+.days span{
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.days span::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150%;
+    width: 55%;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.days span:hover::before {
+    background: #c9c6c6;
+}
+
+.days span.inactive {
+    color: #aaa;
+}
+
+.days span.active {
+     color: #fff;
+ }
+
+.days span.active::before {
+    background-color: #4d8198;
+}
+
+.weeks span{
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+@media only screen and (max-device-width: 800px) {
+    .wrapper {
+        width: 200px;
+        padding: 0 1rem;
+    }
+
+    .wrapper .current-date {
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .wrapper .icons span {
+        padding: 0 0.8rem;
+    }
+
+    .weeks span{
+        font-size: 10px;
+        /*margin-right: 0.3rem;*/
+    }
+
+    .days span {
+        font-size: 10px;
+    }
+
+    .days span::before {
+        height: 135%;
+        width: 50%;
+    }
+}

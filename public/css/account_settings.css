@@ -1,0 +1,96 @@
+.account-settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+form.change-password {
+    /* max-width: 550px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* height: 50vh; */
+    padding: 2rem 0;
+
+    background: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.button-ok {
+    background: #6797AF;
+    border-radius: 20px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 0.5em;
+    line-height: 3em;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button-ok:hover {
+    background: #4d8198;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button-font {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    border: 2px solid gray;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    line-height: 2em;
+    width: 50%;
+}
+
+.input-header {
+    width: 50%;
+}
+
+.no-valid, .no-valid:focus {
+    border: 2px solid red;
+    outline-color: red !important;
+}
+
+@media only screen and (max-device-width: 800px) {
+    header {
+        text-align: center;
+    }
+
+    form.change-password {
+        width: 80%;
+    }
+
+    .account-settings {
+        padding-top: 0;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .input-header {
+        width: 80%;
+        text-align: left;
+    }
+
+    .button-ok {
+        width: 80%;
+    }
+}

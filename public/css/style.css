@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #6797AF;
+    /*background: linear-gradient(180deg, rgb(146.63, 231.63, 77.21) 99.99%, rgba(123, 234, 165, 0) 100%);*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container {
+    width: 50%;
+}
+
+form.login {
+    /* max-width: 550px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* height: 50vh; */
+    padding: 2rem 0;
+
+    background: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.button-login {
+    background: #6797AF;
+    border-radius: 20px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 0.5em;
+    line-height: 3em;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button-login:hover {
+    background: #4d8198;
+}
+
+.button-signup {
+    background: #6797AF;
+    border-radius: 20px;
+    width: 40%;
+    border: none;
+    color: white;
+    margin: 1em;
+    line-height: 2.5em;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button-signup:hover {
+    background: #4d8198;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button-font {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input{
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    border: 2px solid gray;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    line-height: 2em;
+    width: 50%;
+}
+
+.no-valid, .no-valid:focus {
+    border: 2px solid red;
+    outline-color: red !important;
+}
+
+.input-header {
+    width: 50%;
+}
+
+@media only screen and (max-device-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container {
+        width: 100%;
+    }
+
+    .logo-container {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    form {
+        margin: auto;
+    }
+
+    .button-font {
+        font-size: 39px;
+    }
+
+    /* img {
+        height: 7em;
+        margin: 2em;
+    } */
+
+}
