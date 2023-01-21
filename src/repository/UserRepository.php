@@ -30,7 +30,8 @@ class UserRepository extends Repository
         return new User(
             $user['email'],
             $user['password'],
-            $user['id_user']
+            $user['id_user'],
+            $user['id_role']
         );
     }
 
@@ -88,4 +89,14 @@ class UserRepository extends Repository
         $stmt->execute();
     }
 
+    public function getRegisteredUsers()
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM registered_users
+        ');
+
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

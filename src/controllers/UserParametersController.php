@@ -38,7 +38,14 @@ class UserParametersController extends AppController
 
     public function settings()
     {
-        $parameters = $this->userParametersRepository->getUserParameters($_COOKIE["id_user"]);
-        return $this->render('settings', ['parameters' => $parameters]);
+        try{
+            if(!isset($_COOKIE['id_user'])) {
+                throw new Exception("You have to login first!");
+            }
+            $parameters = $this->userParametersRepository->getUserParameters($_COOKIE["id_user"]);
+            return $this->render('settings', ['parameters' => $parameters]);
+        }catch (Exception $exception){
+            $this->render('login', ['messages' => [$exception->getMessage()]]);
+        }
     }
 }
