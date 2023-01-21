@@ -41,6 +41,12 @@ List the ready features here:
 - Admin dashboard displaying registred users
 
 ## Screenshots
+![login](https://user-images.githubusercontent.com/91915476/213835596-f69a5847-0051-42ad-8364-903cc4fce9e6.png)
+![calendar](https://user-images.githubusercontent.com/91915476/213835613-0bb8cfce-280f-4592-96a0-8bbac8eba5b5.png)
+![concrete-day](https://user-images.githubusercontent.com/91915476/213835625-2b12e744-683d-463e-8333-dd737710f10d.png)
+![recipes](https://user-images.githubusercontent.com/91915476/213835630-6387338f-ef05-43ef-9656-5b98e9871b14.png)
+![setttings](https://user-images.githubusercontent.com/91915476/213835634-adbd43b0-30d1-4aaa-8250-5c39f3a75e31.png)
+![my_param](https://user-images.githubusercontent.com/91915476/213835640-7acf6f79-9fc5-4ca0-b0cb-6be9bcab43c3.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Usage
