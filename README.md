@@ -38,7 +38,7 @@ List the ready features here:
 - Login in app
 - Register in app
 - Password changing
-- Admin: //todo
+- Admin dashboard displaying registred users
 
 ## Screenshots
 <!-- If you have screenshots you'd like to share, include them here. -->
