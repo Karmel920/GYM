@@ -1,7 +1,7 @@
 {
   "balance": {
     "title": "Balance",
-    "components" : ["vegetables", "fruit", "milk", "cheese"]
+    "components" : ["vegetables", "fruits", "milk", "cheese", "pasta"]
   },
   "high-protein": {
     "title": "High-protein",
