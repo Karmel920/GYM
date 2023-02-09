@@ -3,19 +3,7 @@ const searchButton = document.querySelector(".button-search");
 const inputSearch = document.querySelector(".input-search-recipes");
 const recipesContainer = document.querySelector(".recipes");
 let recipeButtons = document.querySelectorAll(".button-recipe");
-const allRecipesContainer = document.querySelector(".recipes");
 const overlay = document.querySelector(".overlay");
-
-// allRecipesContainer.addEventListener('click', e=>{
-//     console.log(e.target);
-//     const box = e.target.closest(".button-recipe");
-//     if(box){
-//         const recipe_id = e.target.closest('.recipe-box').dataset.id;
-//         overlay.classList.add("visible");
-//         console.log(recipe_id);
-//     //     function to show recipe
-//     }
-// });
 
 document.addEventListener('click', e=>{
     const pop = e.target.closest(".close-recipe")
@@ -51,9 +39,6 @@ searchButton.addEventListener("click", async ()=>{
         })
     });
 })
-const getView = function (){
-    const recipesButtons = document.querySelectorAll(".button-recipe");
-}
 
 const generatePreview =function(meal){
     const html =`<div class="recipe-box" data-id="${meal.id}">
@@ -74,8 +59,6 @@ const generatePreview =function(meal){
     recipesContainer.insertAdjacentHTML("afterbegin", html);
     recipeButtons = document.querySelectorAll(".button-recipe");
 }
-//
-// const showDetailRecipe = function()
 
 const showRecipe = async(id, name='czosnek')=>{
     overlay.classList.add("visible");
