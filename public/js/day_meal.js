@@ -1,3 +1,5 @@
+import { showMeals, showSumMacros, showUserMacros } from './show_day_meals.js';
+
 const overlay = document.querySelector(".overlay");
 const buttonNewMeal = document.querySelector(".button-new-meal");
 const buttonAddMeal = document.querySelector(".button-add-meal");
@@ -7,11 +9,17 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const dayDate = urlParams.get('day');
 const date = new Date(dayDate);
+
 dateHeader.innerHTML = date.toLocaleDateString('en-CA');
+
+showInfo();
 
 buttonAddMeal.addEventListener('click', evt => {
     evt.preventDefault();
     addMealToDay();
+    sleep(500).then(() => {
+        showInfo();
+    });
 })
 
 buttonNewMeal.addEventListener('click', evt => {
@@ -32,6 +40,22 @@ document.addEventListener('click', e=>{
         overlay.classList.remove("visible");
     }
 });
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function showInfo() {
+    sleep(500).then(() => {
+        showMeals();
+    });
+    sleep(500).then(() => {
+        showSumMacros();
+    });
+    sleep(500).then(() => {
+        showUserMacros();
+    });
+}
 
 function addMealToDay() {
     const data = {date: document.querySelector(".date-day").innerText, name: mealName.value};

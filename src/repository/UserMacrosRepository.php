@@ -15,18 +15,21 @@ class UserMacrosRepository extends Repository
 
         $userMacros = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(!$userMacros) {
+        try {
+            if(!$userMacros) {
+                throw new Exception("No parameters for this user");
+            }
+            return new UserMacros(
+                $userMacros['kcal'],
+                $userMacros['proteins'],
+                $userMacros['fats'],
+                $userMacros['carbs'],
+                $userMacros['id_user'],
+                $userMacros['id_user_macros']
+            );
+        } catch(Exception $exception) {
             return null;
         }
-
-        return new UserMacros(
-            $userMacros['kcal'],
-            $userMacros['proteins'],
-            $userMacros['fats'],
-            $userMacros['carbs'],
-            $userMacros['id_user'],
-            $userMacros['id_user_macros']
-        );
     }
 
     public function getUserMacrosFetch(int $idUser)

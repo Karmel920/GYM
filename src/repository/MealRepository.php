@@ -15,18 +15,21 @@ class MealRepository extends Repository
 
         $meal = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(!$meal) {
+        try{
+            if(!$meal) {
+                throw new Exception("There is no such meal");
+            }
+            return new Meal(
+                $meal['name'],
+                $meal['kcal'],
+                $meal['proteins'],
+                $meal['fats'],
+                $meal['carbs'],
+                $meal['id_meal']
+            );
+        } catch (Exception $exception) {
             return null;
         }
-
-        return new Meal(
-            $meal['name'],
-            $meal['kcal'],
-            $meal['proteins'],
-            $meal['fats'],
-            $meal['carbs'],
-            $meal['id_meal']
-        );
     }
 
     public function addMeal(Meal $meal): void

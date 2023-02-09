@@ -144,7 +144,7 @@ alter table registered_users
     owner to postgres;
 
 
-insert into MY_TABLE (id_day, id_user, id_meal, date)
+insert into days (id_day, id_user, id_meal, date)
 values  (2, 25, 2, '2023-01-16'),
         (3, 25, 3, '2023-01-16'),
         (4, 26, 4, '2023-01-16'),
@@ -186,7 +186,7 @@ values  (2, 25, 2, '2023-01-16'),
         (43, 31, 69, '2023-01-24'),
         (44, 31, 3, '2023-01-25');
 
-insert into MY_TABLE (id_meal, name, kcal, proteins, fats, carbs)
+insert into meals (id_meal, name, kcal, proteins, fats, carbs)
 values  (2, 'owsianka(100g)', 500, 10, 3, 80),
         (3, 'banan', 200, 10, 5, 30),
         (4, 'spaghetti', 1200, 50, 20, 120),
@@ -201,11 +201,11 @@ values  (2, 'owsianka(100g)', 500, 10, 3, 80),
         (75, 'Skyr 350g', 273, 23, 5, 33),
         (76, 'nutella(100g)', 550, 5, 20, 50);
 
-insert into MY_TABLE (id_role, user, admin)
+insert into role (id_role, user, admin)
 values  (1, 1, 0),
         (2, 0, 1);
 
-insert into MY_TABLE (id_user, email, password, id_role)
+insert into users (id_user, email, password, id_role)
 values  (26, 'jasper69@gmail.com', 'c74b1b0fc233e8cc7226c82bced40d686ddd97e8', 1),
         (27, 'pokrywa12@prz.edu.pl', 'bd18b2e6583c4052d495408f247845f9f570ae8d', 1),
         (28, 'mpoweska@gmail.com', '0219fcbacad3451970f712ee13444bd455cb5fcc', 1),
@@ -214,7 +214,7 @@ values  (26, 'jasper69@gmail.com', 'c74b1b0fc233e8cc7226c82bced40d686ddd97e8', 1
         (30, 'aniap@gmail.com', '8911cc1ff3c20695c98d8eada02ab413fd0632df', 1),
         (31, 'trolek@o2.pl', '3a6d989fd8ca7bd7d60a1bb33e27d8da2c0cda2d', 1);
 
-insert into MY_TABLE (id_user_macros, kcal, proteins, fats, carbs, id_user)
+insert into users_macros (id_user_macros, kcal, proteins, fats, carbs, id_user)
 values  (10, 2227, 112, 62, 307, 26),
         (11, 3431, 172, 96, 472, 27),
         (9, 3470, 174, 97, 478, 25),
@@ -223,7 +223,7 @@ values  (10, 2227, 112, 62, 307, 26),
         (14, 2201, 111, 62, 303, 30),
         (15, 3670, 184, 102, 505, 31);
 
-insert into MY_TABLE (id_user_parameters, sex, age, height, weight, aim, id_user)
+insert into users_parameters (id_user_parameters, sex, age, height, weight, aim, id_user)
 values  (17, 'woman', 28, 165, 60, 'reduction', 26),
         (18, 'man', 22, 178, 68, 'mass', 27),
         (16, 'man', 21, 170, 72, 'mass', 25),
