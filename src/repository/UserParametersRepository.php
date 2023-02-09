@@ -15,19 +15,22 @@ class UserParametersRepository extends Repository
 
         $userParameters = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(!$userParameters) {
+        try{
+            if(!$userParameters) {
+                throw new Exception("There is no parameters for this user");
+            }
+            return new UserParameters(
+                $userParameters['sex'],
+                $userParameters['age'],
+                $userParameters['height'],
+                $userParameters['weight'],
+                $userParameters['aim'],
+                $userParameters['id_user'],
+                $userParameters['id_user_parameters']
+            );
+        } catch (Exception $exception) {
             return null;
         }
-
-        return new UserParameters(
-            $userParameters['sex'],
-            $userParameters['age'],
-            $userParameters['height'],
-            $userParameters['weight'],
-            $userParameters['aim'],
-            $userParameters['id_user'],
-            $userParameters['id_user_parameters']
-        );
     }
 
     public function addUserParameters(UserParameters $userParameters): void

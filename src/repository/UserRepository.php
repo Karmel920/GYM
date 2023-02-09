@@ -15,24 +15,19 @@ class UserRepository extends Repository
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(!$user) {
+        try {
+            if(!$user) {
+                throw new Exception("There is no such user!");
+            }
+            return new User(
+                $user['email'],
+                $user['password'],
+                $user['id_user'],
+                $user['id_role']
+            );
+        } catch(Exception $exception) {
             return null;
         }
-
-//        if($user['id_user_parameters'] == null) {
-//            $user['id_user_parameters'] = 0;
-//        }
-//
-//        if($user['id_user_macros'] == null) {
-//            $user['id_user_macros'] = 0;
-//        }
-
-        return new User(
-            $user['email'],
-            $user['password'],
-            $user['id_user'],
-            $user['id_role']
-        );
     }
 
     public function getUserById(int $idUser): ?User
@@ -45,23 +40,19 @@ class UserRepository extends Repository
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(!$user) {
+        try {
+            if(!$user) {
+                throw new Exception("There is no such user!");
+            }
+            return new User(
+                $user['email'],
+                $user['password'],
+                $user['id_user'],
+                $user['id_role']
+            );
+        } catch(Exception $exception) {
             return null;
         }
-
-//        if($user['id_user_parameters'] == null) {
-//            $user['id_user_parameters'] = 0;
-//        }
-//
-//        if($user['id_user_macros'] == null) {
-//            $user['id_user_macros'] = 0;
-//        }
-
-        return new User(
-            $user['email'],
-            $user['password'],
-            $user['id_user']
-        );
     }
 
     public function addNewUser(User $user): void
