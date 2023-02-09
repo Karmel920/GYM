@@ -5,8 +5,8 @@
     <script src="https://kit.fontawesome.com/a0e770b090.js" crossorigin="anonymous"></script>
     <script src="public/js/drop_down_menu.js" defer></script>
     <script src="public/js/add_new_meal.js" defer></script>
-    <script src="public/js/day_meal.js" defer></script>
-    <script src="public/js/show_day_meals.js" defer></script>
+    <script type="module" src="public/js/day_meal.js" defer></script>
+    <script type="module" src="public/js/show_day_meals.js" defer></script>
     <title>DAY MEALS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -44,19 +44,9 @@
                     <button disabled type="reset" class="button-form button-add-meal">Add meal</button>
                     <span>OR</span>
                     <button class="button-form button-new-meal">New Meal</button>
-                    <button class="button-form button-day-meals">Show meals on day</button>
                 </form>
             </div>
             <div class="meals">
-<!--                <div class="meal">-->
-<!--                    <h2>Hamburger</h2>-->
-<!--                    <div class="macros-list">-->
-<!--                        <span>kcal:2000</span>-->
-<!--                        <span>proteins:200g</span>-->
-<!--                        <span>carbs:100g</span>-->
-<!--                        <span>fats:100g</span>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
             <div class="sum-container">
                 <div class="sum">

@@ -1,15 +1,7 @@
-const showMealsButton = document.querySelector(".button-day-meals");
 const mealsContainer = document.querySelector(".meals");
 const macroContainer = document.querySelector(".sum-container");
 
-showMealsButton.addEventListener('click', evt => {
-    evt.preventDefault();
-    showMeals();
-    showSumMacros();
-    showUserMacros();
-})
-
-function showMeals() {
+export function showMeals() {
     const data = {date: document.querySelector(".date-day").innerText}
     fetch("/getMealByDay", {
         method: "POST",
@@ -52,7 +44,7 @@ function createMeal(meal) {
 
 
 
-function showSumMacros() {
+export function showSumMacros() {
     const data = {date: document.querySelector(".date-day").innerText}
     fetch("/getSumMacros", {
         method: "POST",
@@ -88,7 +80,7 @@ function createSumMacros(sumMacros)
 
 
 
-function showUserMacros()
+export function showUserMacros()
 {
     fetch("/getUserMacros").then(function (response){
         return response.json();
