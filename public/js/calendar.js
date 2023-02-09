@@ -1,7 +1,6 @@
 const currentDate = document.querySelector(".current-date");
 const daysTag = document.querySelector(".days");
 const prevNextIcon = document.querySelectorAll(".icons span");
-let dayDate;
 
 let date = new Date();
 let currYear = date.getFullYear();
@@ -10,10 +9,10 @@ let currMonth = date.getMonth();
 const months = ["January","February","March","April","May","June","July",
                 "August","September","October","November","December"];
 const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay();
-    let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
-    let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay();
-    let lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
+    const firstDayofMonth = new Date(currYear, currMonth, 1).getDay();
+    const lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+    const lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay();
+    const lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
     let spanTag = "";
 
     for (let i = firstDayofMonth; i > 0; i--) {
