@@ -7,6 +7,7 @@
     <script src="public/js/add_new_meal.js" defer></script>
     <script type="module" src="public/js/day_meal.js" defer></script>
     <script type="module" src="public/js/show_day_meals.js" defer></script>
+    <script src="public/js/search_bar.js" defer></script>
     <title>DAY MEALS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -40,7 +41,11 @@
         <section class='day'>
             <div class="form-container">
                 <form>
-                    <input class="meal-name" type="text" id="name-input" placeholder="find meal">
+                    <div class="search-bar-container">
+                        <input class="meal-name" type="text" id="name-input" placeholder="find meal">
+                        <div class="search-bar hide">
+                        </div>
+                    </div>
                     <button disabled type="reset" class="button-form button-add-meal">Add meal</button>
                     <span>OR</span>
                     <button class="button-form button-new-meal">New Meal</button>

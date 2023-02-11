@@ -25,6 +25,7 @@ Routing::post('addNewMeal', 'MealController');
 Routing::post('addMealToDay', 'DayController');
 Routing::post('getMealByDay', 'DayController');
 Routing::post('getSumMacros', 'DayController');
+Routing::post('getSearchMeals', 'DayController');
 Routing::post('getUserMacros', 'UserMacrosController');
 
 Routing::run($path);
