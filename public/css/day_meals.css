@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .day{
     background: white;
     margin: 0 2rem;
@@ -138,6 +142,43 @@ form.meal-form {
     left: 50%;
     width: 50%;
     transform: translate(-50%, -50%);
+}
+
+.meal-name {
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.search-bar-container {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.search-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    background: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 10px 18px -6px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 10px 18px -6px rgba(66, 68, 90, 1);
+    box-shadow: 0px 10px 18px -6px rgba(66, 68, 90, 1);
+}
+
+.hide {
+    display: none;
+}
+
+.p-click:hover{
+    cursor: pointer;
 }
 
 @media only screen and (max-device-width: 800px) {
