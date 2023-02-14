@@ -47,6 +47,9 @@ List the ready features here:
 ![recipes](https://user-images.githubusercontent.com/91915476/213835630-6387338f-ef05-43ef-9656-5b98e9871b14.png)
 ![setttings](https://user-images.githubusercontent.com/91915476/213835634-adbd43b0-30d1-4aaa-8250-5c39f3a75e31.png)
 ![my_param](https://user-images.githubusercontent.com/91915476/213835640-7acf6f79-9fc5-4ca0-b0cb-6be9bcab43c3.png)
+![calmobile](https://user-images.githubusercontent.com/91915476/218885083-fa94e0a6-7171-44d3-8230-fd7630a34a62.png)
+![menumobile](https://user-images.githubusercontent.com/91915476/218885093-195886ba-fef8-4ede-a631-faac50399782.png)
+![recipesmobile](https://user-images.githubusercontent.com/91915476/218885103-35a811d6-2104-4a3a-90f1-b7f3076f4102.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Usage
